@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue – One‑Page Site</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom overrides -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="antialiased text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="#" class="text-xl font-semibold">Vuezora</a>
+        <div class="space-x-6 hidden md:block">
+          <a href="#home" class="hover:text-indigo-600">Home</a>
+          <a href="#features" class="hover:text-indigo-600">Features</a>
+          <a href="#contact" class="hover:text-indigo-600">Contact</a>
+        </div>
+        <!-- Mobile menu toggle -->
+        <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile nav -->
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-white">
+        <a href="#home" class="block hover:text-indigo-600">Home</a>
+        <a href="#features" class="block hover:text-indigo-600">Features</a>
+        <a href="#contact" class="block hover:text-indigo-600">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-center p-8">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Building Ideas into Reality
+      </h1>
+      <p class="max-w-xl mb-8 text-lg md:text-xl">
+        We craft innovative software and web solutions that scale with your vision.
+      </p>
+      <a href="#contact" class="button-glow inline-block bg-white text-indigo-600 px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl transition">
+        Get in touch
+      </a>
+    </header>
+
+    <!-- Features -->
+    <section id="features" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center mb-12">What We Offer</h2>
+        <div class="grid gap-10 md:grid-cols-3">
+          <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-medium mb-2">Web Development</h3>
+            <p>
+              Responsive, high‑performance websites and PWAs tailored to your brand.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-medium mb-2">Mobile Apps</h3>
+            <p>
+              Cross‑platform mobile apps that deliver seamless user experiences.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-medium mb-2">Cloud & IoT</h3>
+            <p>
+              Scalable cloud infrastructure and smart IoT integrations keeping you connected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16">
+      <div class="container mx-auto px-6 max-w-lg text-center">
+        <h2 class="text-3xl font-semibold mb-6">Let’s Work Together</h2>
+        <p class="mb-8">
+          Have a project in mind? Reach out and let's make something awesome.
+        </p>
+        <a href="mailto:contact@vue.com" class="button-glow inline-block bg-indigo-600 text-white px-8 py-3 rounded-2xl shadow hover:bg-indigo-700 transition">
+          contact@vuezora.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-6 text-center text-sm">
+      © 2025 Vue. All rights reserved.
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
